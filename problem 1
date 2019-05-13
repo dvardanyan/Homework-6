@@ -1,0 +1,5 @@
+function maxProd(arr) {
+	let a = arr.map((a,b) =>a*b);
+	let ans = Math.max(...a);
+    return ans;
+}
