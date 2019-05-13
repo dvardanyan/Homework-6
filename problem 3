@@ -1,0 +1,9 @@
+function acronym(s) {
+	let a = s.split(" ");
+	let b = a.map(a => a[0]);
+	let ans = b.join("").toUpperCase();
+	return ans;
+}
+
+let s = "Prisoner of War" 
+let s = "Have a good night"
