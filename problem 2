@@ -1,0 +1,30 @@
+// option 1
+
+function missYou(arr) {
+	let b = [...arr];
+	let a = b.sort((a,b) =>a-b);
+	let ans = [];
+	for (i = a[0];i<=a[a.length-1];i++) {
+         ans.push(a[i]);
+	}
+	return ans.length - arr.length;
+}
+
+//recursive way
+
+function missYou(arr) {
+	let b = [...arr];
+	let a = b.sort((a,b) =>a-b);
+	let first = a[0];
+	let last = a[a.length-1];
+	let ans = [];
+	function newar(one,two) {
+		if (one === two) 
+			return [one];
+		else 
+		   return [one,...newar(one+1,two)];
+	}
+	ans = newar(first,last);
+	return ans.length - arr.length;
+}
+
